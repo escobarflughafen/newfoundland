@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+* {
+  font-family: "Helvetica Neue", sans-serif;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -32,7 +36,25 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+.brand {
+  font-weight: 600;
+  font-family: "Helvetica Neue", sans-serif;
+  letter-spacing: -0.5pt;
+}
+
+.bg-orange {
+  background-color: #d24522;
+}
+
+.rainbow {
+  background-image: linear-gradient(to left, #03dac6, #018786);
+  color: transparent;
+  background-clip: text;
+  width: max-content;
 }

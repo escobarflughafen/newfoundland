@@ -1,17 +1,27 @@
-import { Link, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet } from 'react-router-dom'
+import AppNavbar from './components/navbar'
+import { Container, Card, Navbar, Nav } from 'react-bootstrap';
+import Brand from './components/brand';
+import './App.css'
 
 function App() {
 
   return (
     <div>
-      <h1>sphinx in the face</h1>
-      <nav style={{ fontFamily: "Helvetica Neue; sans-serif", borderBottom: 'solid 1px', paddingBottom: '1rem' }}>
-        <Link to="/posts">posts</Link> |{' '}
-        <Link to="/archives">archives</Link> |{' '}
-        <Link to="/about">about</Link>  |{' '}
-        <Link to="/tools">tools</Link>
-      </nav>
-      <Outlet />
+      <Navbar className="mb-3" bg="black" expand="md">
+        <Container fluid>
+          <Link to="/" className="brand text-white" style={{ fontSize: "1.5rem" }}>sphinx in the face</Link>
+        </Container>
+
+      </Navbar>
+      <Container>
+        <Card>
+          <Card.Header>
+            <AppNavbar variant="tabs" />
+          </Card.Header>
+          <Outlet />
+        </Card>
+      </Container>
     </div>
   );
 
