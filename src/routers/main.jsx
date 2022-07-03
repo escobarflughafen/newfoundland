@@ -6,6 +6,7 @@ import Archive from '../pages/archive'
 import Posts from '../pages/posts'
 import Tools from '../pages/tools'
 import { useEffect } from 'react'
+import Post from '../pages/post'
 
 export default function MainRouter() {
 
@@ -21,7 +22,19 @@ export default function MainRouter() {
                         path="posts"
                         element={<Posts />}
 
-                    ></Route>
+                    >
+                        <Route
+                            path="preview/:id"
+                            element={<Post />}
+                            ></Route>
+
+                    </Route>
+                    <Route
+                        path="posts/:id"
+                        element={<Post />}
+                    >
+
+                    </Route>
                     <Route
                         path="archive"
                         element={<Archive />}

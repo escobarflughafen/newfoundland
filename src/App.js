@@ -10,11 +10,13 @@ function App() {
     <div>
       <Navbar className="mb-3" bg="black" expand="md">
         <Container fluid>
-          <Link to="/" className="brand text-white" style={{ fontSize: "1.5rem" }}>sphinx in the face</Link>
+          <Link to="/" className="brand text-white" style={{ fontSize: "1.5rem" }}>
+            newfoundland
+          </Link>
         </Container>
 
       </Navbar>
-      <Container>
+      <Container className="mb-3">
         <Card>
           <Card.Header>
             <AppNavbar variant="tabs" />
